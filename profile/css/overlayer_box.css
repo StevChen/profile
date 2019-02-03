@@ -1,0 +1,19 @@
+.overlayer {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: rgba(53,47,47,0.70);
+}
+
+.overlayer_box {
+  margin: 5% auto;
+  width: 70%;
+  min-height: 100px;
+  max-height: 80%;
+  padding: 20px 20px;
+  background: white;
+}
