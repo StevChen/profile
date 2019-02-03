@@ -1,14 +1,29 @@
-var portfolioBoxes = document.getElementsByClassName("portfolio-box-header");
+var portfolioBoxHeaders = document.getElementsByClassName("portfolio-box-header");
+var overlayer = document.getElementById("overlayer");
 //console.log(porfolioBoxes);
 
-function displayDetail(){
-	var overlayer = document.getElementsByClassName("overlayer");
+function displayDetail(e){
+	console.log(e.target.textContent);
 	document.body.style.overflow = "hidden";
-	overlayer[0].style.display = "block";
-} 
+	overlayer.style.display = "block";
 
-for(var i=0; i<portfolioBoxes.length; i++){
-	//console.log(porfolioBoxes[i]);
-	portfolioBoxes[i].addEventListener("click", displayDetail);
+	var title = overlayer.querySelector(".overlayer_box #title h1");
+	var detail = overlayer.querySelector(".overlayer_box #detail");
+	title.textContent = e.target.textContent;
+	detail.innerHTML = "Under Construction";
+
 }
 
+for(var i=0; i<portfolioBoxHeaders.length; i++){
+	//console.log(porfolioBoxes[i]);
+	console.log(portfolioBoxHeaders[i]);
+	portfolioBoxHeaders[i].addEventListener("click", displayDetail);
+}
+
+window.onclick = function(e){
+	//console.log(e.target);
+	if(e.target == overlayer){
+		overlayer.style.display = "none";
+		document.body.style.overflow = "auto";
+	}
+}

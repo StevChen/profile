@@ -285,6 +285,7 @@ label{
   background: rgba(237, 237, 237, 0.5)
 }
 
+/*Protfolio Box*/
 .portfolio-box{
   margin: 80px auto;
   width: 80%;
@@ -325,4 +326,3 @@ label{
         width: 500px;
     }
 }
-
